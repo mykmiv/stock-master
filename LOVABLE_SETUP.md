@@ -6,28 +6,26 @@ L'application a besoin de **variables d'environnement Supabase** pour fonctionne
 
 ## 🔧 Comment configurer les variables dans Lovable
 
-### Étape 1: Obtenir vos clés Supabase
+### ✅ Si Supabase est déjà lié (comme dans votre cas)
 
-1. Allez sur votre [dashboard Supabase](https://app.supabase.com)
-2. Sélectionnez votre projet
-3. Allez dans **Settings** → **API**
-4. Copiez :
-   - **Project URL** → `VITE_SUPABASE_URL`
-   - **anon/public key** → `VITE_SUPABASE_PUBLISHABLE_KEY`
-
-### Étape 2: Configurer dans Lovable
+Lovable peut automatiquement injecter certaines variables, mais il faut vérifier qu'elles sont bien configurées :
 
 1. Ouvrez votre projet dans [Lovable](https://lovable.dev)
-2. Allez dans **Settings** → **Environment Variables** (ou **Project Settings** → **Environment**)
-3. Ajoutez ces deux variables :
+2. Allez dans **Project Settings** → **Environment Variables** (ou **Settings** → **Environment**)
+3. Vérifiez que ces variables existent :
+   - `VITE_SUPABASE_URL` (doit commencer par `https://`)
+   - `VITE_SUPABASE_PUBLISHABLE_KEY` (longue chaîne de caractères)
 
-```
-VITE_SUPABASE_URL=https://votre-projet.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=votre-cle-publique-ici
-```
+4. **Si elles n'existent pas**, ajoutez-les manuellement :
+   - Allez sur votre [dashboard Supabase](https://app.supabase.com)
+   - Sélectionnez votre projet "Trading learning app"
+   - Allez dans **Settings** → **API**
+   - Copiez :
+     - **Project URL** → pour `VITE_SUPABASE_URL`
+     - **anon/public key** → pour `VITE_SUPABASE_PUBLISHABLE_KEY`
 
-4. **Important** : Remplacez `https://votre-projet.supabase.co` et `votre-cle-publique-ici` par vos vraies valeurs
-5. Sauvegardez et redémarrez l'application dans Lovable
+5. **Important** : Les variables doivent commencer par `VITE_` pour être accessibles dans Vite/React
+6. Sauvegardez et redémarrez l'application dans Lovable
 
 ### Étape 3: Vérifier
 
@@ -66,4 +64,6 @@ Pour créer votre `.env` local :
 ### Le visuel est toujours différent
 - Les variables d'environnement doivent être rechargées (redémarrer l'app dans Lovable)
 - Vérifiez que vous utilisez le même projet Supabase
+- **Important** : Même si Supabase est "Enabled" dans Lovable, vérifiez que les variables `VITE_SUPABASE_URL` et `VITE_SUPABASE_PUBLISHABLE_KEY` sont bien définies dans les Environment Variables du projet
+- Lovable peut injecter automatiquement `SUPABASE_URL` et `SUPABASE_ANON_KEY`, mais l'application a besoin de `VITE_SUPABASE_URL` et `VITE_SUPABASE_PUBLISHABLE_KEY` (avec le préfixe `VITE_`)
 
