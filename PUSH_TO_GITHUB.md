@@ -2,7 +2,7 @@
 
 ## URL du dépôt GitHub
 ```
-https://github.com/mykmiv/stock-master-ai.git
+https://github.com/mykmiv/stock-master.git
 ```
 
 ## Commandes pour envoyer vos modifications

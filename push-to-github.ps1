@@ -33,7 +33,7 @@ if ($LASTEXITCODE -eq 0) {
     
     if ($LASTEXITCODE -eq 0) {
         Write-Host "`n✅ Succès! Vos modifications ont été envoyées vers GitHub." -ForegroundColor Green
-        Write-Host "🔗 https://github.com/mykmiv/stock-master-ai" -ForegroundColor Blue
+        Write-Host "🔗 https://github.com/mykmiv/stock-master" -ForegroundColor Blue
     } else {
         Write-Host "`n❌ Erreur lors de l'envoi vers GitHub." -ForegroundColor Red
     }
