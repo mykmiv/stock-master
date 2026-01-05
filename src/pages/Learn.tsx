@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { MainLayout } from '@/components/layout/MainLayout';
-import { FineloLearningScreen } from '@/components/learning/FineloLearningScreen';
+import { DuolingoLearningScreen } from '@/components/learning/DuolingoLearningScreen';
 import { LessonPlayer } from '@/components/learning/LessonPlayer';
 import { XPGain } from '@/components/rewards/XPGain';
 import { CoinGain } from '@/components/rewards/CoinGain';
@@ -221,7 +221,7 @@ export default function Learn() {
 
   return (
     <>
-      <FineloLearningScreen
+      <DuolingoLearningScreen
         lessons={lessons}
         onLessonClick={handleLessonClick}
       />
