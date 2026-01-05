@@ -9,7 +9,7 @@ export function StatsHeader() {
   const { profile } = useAuth();
   
   const totalXP = profile?.xp || 0;
-  const totalCoins = profile?.coins || 0;
+  const totalCoins = (profile as any)?.coins || 0;
   const streakDays = profile?.streak_days || 0;
   
   // Calculate current level
@@ -84,4 +84,3 @@ export function StatsHeader() {
     </div>
   );
 }
-

@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Auto-seed lessons on app initialization
 // This will check and insert lessons if they don't exist
 

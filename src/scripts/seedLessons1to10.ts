@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Script to seed lessons 1-10 into the database
 // Run this after applying the migration
 

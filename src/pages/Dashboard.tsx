@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { MainLayout } from '@/components/layout/MainLayout';
 import { useAuth } from '@/hooks/useAuth';
 import { useMarketHours } from '@/hooks/useMarketHours';

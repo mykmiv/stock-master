@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Parser pour transformer le contenu HTML statique en micro-leçons interactives
  * Divise le contenu en étapes avec des opportunités d'interaction

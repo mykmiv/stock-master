@@ -6,17 +6,24 @@ export type OrderStatus = 'pending' | 'executed' | 'cancelled';
 
 export interface Profile {
   id: string;
-  user_id: string;
-  username: string | null;
+  email: string | null;
+  display_name: string | null;
   avatar_url: string | null;
-  level: UserLevel;
-  xp: number;
-  streak_days: number;
+  level: string | null;
+  xp: number | null;
+  coins: number | null;
+  streak_days: number | null;
   last_activity_date: string | null;
-  onboarding_completed: boolean;
-  readiness_score: number;
-  created_at: string;
-  updated_at: string;
+  onboarding_completed: boolean | null;
+  is_admin: boolean | null;
+  risk_tolerance: string | null;
+  trading_goals: string | null;
+  lessons_completed: number | null;
+  perfect_scores: number | null;
+  current_level: number | null;
+  user_level: number | null;
+  created_at: string | null;
+  updated_at: string | null;
 }
 
 export interface Lesson {

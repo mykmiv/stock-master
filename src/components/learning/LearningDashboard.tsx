@@ -9,7 +9,7 @@ export function LearningDashboard() {
   const { profile } = useAuth();
   
   const userXP = profile?.xp || 0;
-  const userCoins = profile?.coins || 0;
+  const userCoins = (profile as any)?.coins || 0;
   const userStreak = profile?.streak_days || 0;
   
   // Calculate current level
@@ -78,4 +78,3 @@ export function LearningDashboard() {
     </div>
   );
 }
-

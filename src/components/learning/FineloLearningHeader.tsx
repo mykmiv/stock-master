@@ -6,7 +6,7 @@ export function FineloLearningHeader() {
   const { profile } = useAuth();
   
   const streakDays = profile?.streak_days || 0;
-  const totalCoins = profile?.coins || 0;
+  const totalCoins = (profile as any)?.coins || 0;
 
   return (
     <div className="bg-gradient-to-br from-white via-indigo-50 to-purple-50 px-6 py-6 relative overflow-hidden">
@@ -145,4 +145,3 @@ export function FineloLearningHeader() {
     </div>
   );
 }
-

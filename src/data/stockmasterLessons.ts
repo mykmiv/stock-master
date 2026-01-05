@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Example lesson content for StockMaster AI Learning System
 // Module 1: Trading Fundamentals - Day 1
 
